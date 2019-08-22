@@ -6,4 +6,4 @@ before_install:
     - docker build -t jahirbnavaz/docker-goggles -f Dockerfile.dev .
 
 script:
-    - docker run jahirbnavaz/docker-goggles npm run test -- --coverage
+    - docker run -e CI=true jahirbnavaz/docker-goggles npm run test
